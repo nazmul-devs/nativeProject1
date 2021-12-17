@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View, Image } from "react-native";
-import Tabs from "./Tabs";
+import { Link } from "react-router-native";
 
 function Home(props) {
 	return (
@@ -10,7 +10,10 @@ function Home(props) {
 				style={styles.bannerImg}
 				source={require("../assets/images/home-banner.png")}
 			></Image>
-			<Text style={styles.startText}>Get start ➨</Text>
+
+			<Link to={"/mainapp"}>
+				<Text style={styles.startText}>Get start ➨</Text>
+			</Link>
 		</View>
 	);
 }

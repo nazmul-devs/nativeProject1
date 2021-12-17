@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-
 function Tabs(props) {
 	return (
 		<View style={styles.navLink}>
