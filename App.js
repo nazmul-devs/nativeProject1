@@ -1,8 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { Link, NativeRouter, Route, Routes } from "react-router-native";
+import { StyleSheet, View } from "react-native";
+import { NativeRouter, Route, Routes } from "react-router-native";
+import Catagory from "./Component/Catagory";
 import Home from "./Component/Home";
+import Login from "./Component/Login";
 import MainApp from "./Component/MainApp";
+import Products from "./Component/Products";
+import Tabs from "./Component/Tabs";
 
 export default function App() {
 	return (
@@ -16,7 +20,11 @@ export default function App() {
 						path="/mainapp"
 						element={<MainApp></MainApp>}
 					></Route>
+					<Route exact path="/products" element={<Products />}></Route>
+					<Route exact path="/catagory" element={<Catagory />}></Route>
+					<Route exact path="/login" element={<Login></Login>}></Route>
 				</Routes>
+				<Tabs />
 			</NativeRouter>
 		</View>
 	);

@@ -1,36 +1,45 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { Link } from "react-router-native";
 function Tabs(props) {
 	return (
 		<View style={styles.navLink}>
-			<Text style={styles.navItem}>H</Text>
-			<Text style={styles.navItem}>S</Text>
-			<Text style={styles.navItem}>C</Text>
-			<Text style={styles.navItem}>L</Text>
+			<Link to={"/mainapp"}>
+				<Text style={styles.navItem}>H</Text>
+			</Link>
+			<Link to={"/"}>
+				<Text style={styles.navItem}>S</Text>
+			</Link>
+			<Link to={"/catagory"}>
+				<Text style={styles.navItem}>C</Text>
+			</Link>
+			<Link to={"/login"}>
+				<Text style={styles.navItem}>L</Text>
+			</Link>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	navItem: {
-		paddingTop: 20,
 		backgroundColor: "#fff",
-		height: 60,
-		width: 65,
-		textAlign: "center",
 		borderRadius: 10,
+		height: 60,
+		paddingTop: 20,
+		textAlign: "center",
+		width: 65,
 	},
 	navLink: {
-		backgroundColor: "dodgerblue",
-		height: 65,
-		position: "absolute",
+		alignItems: "center",
+		backgroundColor: "#EAECEE",
 		borderRadius: 12,
 		bottom: 10,
-		left: 12,
-		right: 12,
 		flexDirection: "row",
+		height: 65,
 		justifyContent: "space-evenly",
-		alignItems: "center",
+		left: 12,
+		position: "absolute",
+		right: 12,
 	},
 });
 

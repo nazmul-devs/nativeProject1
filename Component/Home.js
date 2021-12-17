@@ -11,9 +11,11 @@ function Home(props) {
 				source={require("../assets/images/home-banner.png")}
 			></Image>
 
-			<Link to={"/mainapp"}>
-				<Text style={styles.startText}>Get start ➨</Text>
-			</Link>
+			<View style={styles.startBtn}>
+				<Link to={"/mainapp"}>
+					<Text style={styles.startText}>Get start ➨</Text>
+				</Link>
+			</View>
 		</View>
 	);
 }
@@ -35,15 +37,20 @@ const styles = StyleSheet.create({
 		marginTop: 30,
 		textAlign: "center",
 	},
+	startBtn: {
+		bottom: 120,
+		left: "20%",
+		position: "absolute",
+		width: "60%",
+	},
 	startText: {
 		backgroundColor: "dodgerblue",
+		borderRadius: 10,
+		color: "#fff",
 		fontSize: 30,
 		fontWeight: "bold",
 		padding: 10,
-		color: "#fff",
 		textAlign: "center",
-		margin: 10,
-		borderRadius: 10,
 	},
 });
 
