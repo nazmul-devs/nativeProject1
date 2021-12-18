@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { NativeRouter, Route, Routes } from "react-router-native";
 import Catagory from "./Component/Catagory";
+import Details from "./Component/Details";
 import Home from "./Component/Home";
 import Login from "./Component/Login";
 import MainApp from "./Component/MainApp";
@@ -23,6 +24,11 @@ export default function App() {
 					<Route exact path="/products" element={<Products />}></Route>
 					<Route exact path="/catagory" element={<Catagory />}></Route>
 					<Route exact path="/login" element={<Login></Login>}></Route>
+					<Route
+						exact
+						path="/details"
+						element={<Details></Details>}
+					></Route>
 				</Routes>
 				<Tabs />
 			</NativeRouter>

@@ -1,33 +1,43 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { Link } from "react-router-native";
 function Tabs(props) {
 	return (
 		<View style={styles.navLink}>
 			<Link to={"/mainapp"}>
-				<Text style={styles.navItem}>H</Text>
+				<Image
+					style={styles.icon}
+					source={require("../assets/Icons/home.png")}
+				></Image>
 			</Link>
 			<Link to={"/"}>
-				<Text style={styles.navItem}>S</Text>
+				<Image
+					style={styles.icon}
+					source={require("../assets/Icons/search.png")}
+				></Image>
 			</Link>
 			<Link to={"/catagory"}>
-				<Text style={styles.navItem}>C</Text>
+				<Image
+					style={styles.icon}
+					source={require("../assets/Icons/catagory.png")}
+				></Image>
 			</Link>
 			<Link to={"/login"}>
-				<Text style={styles.navItem}>L</Text>
+				<Image
+					style={styles.icon}
+					source={require("../assets/Icons/login.png")}
+				></Image>
 			</Link>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
-	navItem: {
-		backgroundColor: "#fff",
+	icon: {
+		backgroundColor: "white",
 		borderRadius: 10,
-		height: 60,
-		paddingTop: 20,
-		textAlign: "center",
-		width: 65,
+		height: 45,
+		width: 45,
 	},
 	navLink: {
 		alignItems: "center",
